@@ -6,6 +6,9 @@ import NoPage from './pages/NoPage/NoPage';
 import ProductInfo from './pages/ProductInfo/ProductInfo';
 import ScrollTop from './components/scrolltop/ScrollTop';
 import CartPage from './pages/cart/CartPage';
+import AllProduct from './pages/allproduct/AllProduct';
+import SignUp from './pages/registration/SignUp';
+import Login from './pages/registration/Login';
 const App = () => {
   return (
     <div>
@@ -16,6 +19,9 @@ const App = () => {
        <Route path='/*' element={<NoPage></NoPage>}/>
        <Route path='/productinfo' element={<ProductInfo></ProductInfo>}/>
        <Route path='/cart' element={<CartPage></CartPage>}/>
+       <Route path='/allproduct' element={<AllProduct></AllProduct>}/>
+       <Route path='/signup' element={<SignUp></SignUp>}/>
+       <Route path='/login' element={<Login></Login>}/>
       </Routes>
     </Router>
     </div>
