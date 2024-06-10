@@ -1,9 +1,15 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import SearchBar from './../SearchBar/SearchBar';
 import hero from '../../assets/hero.png'
 
 const Navbar = () => {
+    const user =JSON.parse(localStorage.getItem('users'))
+    const navigate=useNavigate();
+    const logout =()=>{
+       localStorage.clear('users')
+       navigate('/login')
+    }
     const [isOpen, setIsOpen] = useState(false);
 
     // Toggle the dropdown menu
@@ -25,15 +31,35 @@ const Navbar = () => {
             </li>
 
             {/* Signup */}
-            <li className="py-2 lg:py-0">
+            {
+                !user ?<li className="py-2 lg:py-0">
                 <Link to={'/signup'}>Signup</Link>
-            </li>
-
+            </li>:""
+            }
+            {/* //login */}
+            {
+                !user ?<li className="py-2 lg:py-0">
+                <Link to={'/login'}>Login</Link>
+            </li>:""
+            }
             {/* User */}
-            <li className="py-2 lg:py-0">
-                <Link to={'/user-dashboard'}>Kamal</Link>
+           {
+            user?.role==="user" && <li className="py-2 lg:py-0">
+            <Link to={'/user-dashboard'}>{user?.name}</Link>
+        </li>
+           }
+             {/* admin */}
+             {
+                user?.role==='admin' && <li className="py-2 lg:py-0">
+                <Link to={'/admin-dashboard'}>{user?.name}</Link>
             </li>
-
+             }
+ {/* /logout */}
+ {
+    user && <li className='cursor-pointer' onClick={logout}>Logout
+    
+    </li>
+ }
             {/* Cart */}
             <li className="py-2 lg:py-0">
                 <Link to={'/cart'}>
