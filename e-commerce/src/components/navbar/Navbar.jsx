@@ -31,7 +31,7 @@ const Navbar = () => {
 
             {/* User */}
             <li className="py-2 lg:py-0">
-                <Link to={'/'}>Kamal</Link>
+                <Link to={'/user-dashboard'}>Kamal</Link>
             </li>
 
             {/* Cart */}
