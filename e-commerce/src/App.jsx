@@ -17,6 +17,7 @@ import UpdateProductPage from './pages/admin/UpdateProductPage';
 import MyState from './context/MyState';
 import ProtectedRouteForUser from './protectedRoute/ProtectedRouteForUser';
 import { ProtectedRouteForAdmin } from './protectedRoute/ProtectedRouteForAdmin';
+import CategoryPage from './pages/category/CategoryPage';
 const App = () => {
   return (
     <MyState>
@@ -25,7 +26,7 @@ const App = () => {
       <Routes>
        <Route path='/' element={<Home></Home>}/>
        <Route path='/*' element={<NoPage></NoPage>}/>
-       <Route path='/productinfo' element={<ProductInfo></ProductInfo>}/>
+       <Route path='/productinfo/:id' element={<ProductInfo></ProductInfo>}/>
        <Route path='/cart' element={<CartPage></CartPage>}/>
        <Route path='/allproduct' element={<AllProduct></AllProduct>}/>
        <Route path='/signup' element={<SignUp></SignUp>}/>
@@ -44,7 +45,7 @@ const App = () => {
        <Route path='/updateproduct/:id' element={<ProtectedRouteForAdmin>
         <UpdateProductPage></UpdateProductPage>
        </ProtectedRouteForAdmin>}/>
-    
+    <Route path="/category/:categoryname" element={<CategoryPage></CategoryPage>}></Route>
       </Routes>
       <Toaster></Toaster>
     </Router>

@@ -18,7 +18,7 @@ const Home = () => {
             <HomePageProductCard></HomePageProductCard>
             <Track/>
             <Testimonial></Testimonial>
-            <Loader></Loader>
+           
         </Layout>
     );
 };

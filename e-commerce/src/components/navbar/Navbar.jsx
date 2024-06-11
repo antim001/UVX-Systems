@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import SearchBar from './../SearchBar/SearchBar';
 import hero from '../../assets/hero.png'
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
     const user =JSON.parse(localStorage.getItem('users'))
@@ -10,6 +11,8 @@ const Navbar = () => {
        localStorage.clear('users')
        navigate('/login')
     }
+    //cart items
+    const cartItems=useSelector((state)=>state.cart)
     const [isOpen, setIsOpen] = useState(false);
 
     // Toggle the dropdown menu
@@ -63,7 +66,7 @@ const Navbar = () => {
             {/* Cart */}
             <li className="py-2 lg:py-0">
                 <Link to={'/cart'}>
-                    Cart(0)
+                    Cart({cartItems.length})
                 </Link>
             </li>
         </ul>
