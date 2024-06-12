@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import SearchBar from './../SearchBar/SearchBar';
 import hero from '../../assets/hero.png'
 import { useSelector } from 'react-redux';
+import CategoriesDropdown from './../Categories/Categories';
 
 const Navbar = () => {
     const user =JSON.parse(localStorage.getItem('users'))
@@ -22,15 +23,19 @@ const Navbar = () => {
 
     // navList Data
     const navList = (
-        <ul className="flex flex-col lg:flex-row lg:space-x-3 text-white font-medium text-md px-5">
+        <ul className="flex flex-col lg:flex-row lg:space-x-3 text-black font-medium text-md px-5">
             {/* Home */}
             <li className="py-2 lg:py-0">
                 <Link to={'/'}>Home</Link>
             </li>
 
             {/* All Product */}
-            <li className="py-2 lg:py-0">
+            <li className="py-2 lg:py-0 ">
                 <Link to={'/allproduct'}>All Product</Link>
+            </li>
+             {/* categories */}
+             <li className="py-2 lg:py-0">
+                <Link to={'/'}><CategoriesDropdown></CategoriesDropdown></Link>
             </li>
 
             {/* Signup */}
@@ -54,7 +59,7 @@ const Navbar = () => {
              {/* admin */}
              {
                 user?.role==='admin' && <li className="py-2 lg:py-0">
-                <Link to={'/admin-dashboard'}>{user?.name}</Link>
+                <Link className=' font-bold rounded-r-xl' to={'/admin-dashboard'}>{user?.name}</Link>
             </li>
              }
  {/* /logout */}
@@ -73,7 +78,7 @@ const Navbar = () => {
     );
 
     return (
-        <nav className="bg-pink-600 sticky top-0 z-10">
+        <nav className="bg-gray-300 sticky top-0 z-10 mb-4">
             {/* main */}
             <div className="flex justify-between items-center py-3 px-5 lg:px-3">
                 {/* left */}
@@ -85,7 +90,7 @@ const Navbar = () => {
 
                 {/* Hamburger menu */}
                 <div className="lg:hidden">
-                    <button onClick={toggleDropdown} className="text-white focus:outline-none">
+                    <button onClick={toggleDropdown} className="text-black focus:outline-none">
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}></path>
                         </svg>
@@ -105,7 +110,7 @@ const Navbar = () => {
 
             {/* Dropdown menu */}
             {isOpen && (
-                <div className="lg:hidden bg-pink-600">
+                <div className="lg:hidden bg-gray-300">
                     {navList}
                     <div className="py-3">
                         <SearchBar />

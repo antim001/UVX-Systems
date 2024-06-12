@@ -7,6 +7,8 @@ import Track from './../../components/track/Track';
 import Testimonial from './../../components/testimonial/Testimonial';
 import myContext from './../../context/MyContext';
 import Loader from './../../components/loader/Loader';
+import Mission from './../../components/Mission/Mission';
+import Contact from './../../components/Contact/Contact';
 
 const Home = () => {
     
@@ -18,7 +20,8 @@ const Home = () => {
             <HomePageProductCard></HomePageProductCard>
             <Track/>
             <Testimonial></Testimonial>
-           
+            <Mission></Mission>
+           <Contact></Contact>
         </Layout>
     );
 };

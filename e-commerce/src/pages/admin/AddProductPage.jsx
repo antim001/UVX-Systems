@@ -8,28 +8,31 @@ import Loader from "../../components/loader/Loader";
 
 const categoryList = [
     {
-        name: 'fashion'
+        name: 'Safety equipment'
     },
     {
-        name: 'shirt'
+        name: 'Educational models'
     },
     {
-        name: 'jacket'
+        name: 'water purification systems'
     },
     {
-        name: 'mobile'
+        name: 'Laboratory Equipments'
     },
     {
-        name: 'laptop'
+        name: 'Laboratory  glassware'
     },
     {
-        name: 'shoes'
+        name: 'Laboratory  consumble'
     },
     {
-        name: 'home'
+        name: 'Laboratory  chemicals and reagent'
     },
     {
-        name: 'books'
+        name: 'Meter & Timers'
+    },
+    {
+        name: 'Office equipments'
     }
 ]
 

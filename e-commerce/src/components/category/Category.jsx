@@ -6,35 +6,39 @@ import { useNavigate } from 'react-router';
 const category = [
     {
         image: 'https://cdn-icons-png.flaticon.com/256/4359/4359963.png',
-        name: 'fashion'
+        name: 'Safety-equipments'
     },
     {
         image: 'https://cdn-icons-png.flaticon.com/256/11833/11833323.png',
-        name: 'shirt'
+        name: 'Educational-models'
     },
     {
         image: 'https://cdn-icons-png.flaticon.com/256/8174/8174424.png',
-        name: 'jacket'
+        name: 'water-purification-system'
     },
     {
         image: 'https://cdn-icons-png.flaticon.com/256/7648/7648246.png',
-        name: 'mobile'
+        name: 'Laboratory-equipments'
     },
     {
         image: 'https://cdn-icons-png.flaticon.com/256/12142/12142416.png',
-        name: 'laptop'
+        name: 'Meter and timers'
     },
     {
         image: 'https://cdn-icons-png.flaticon.com/256/10686/10686553.png',
-        name: 'shoes'
+        name: 'Laboratory glassware'
     },
     {
         image: 'https://cdn-icons-png.flaticon.com/256/12114/12114279.png',
-        name: 'home'
+        name: 'Laboratory  consumble'
     },
     {
         image: 'https://cdn-icons-png.flaticon.com/256/11946/11946316.png',
-        name: 'books'
+        name: 'Laboratory  chemicals & reagent'
+    },
+    {
+        image: 'https://cdn-icons-png.flaticon.com/256/11946/11946316.png',
+        name: 'Office equipment'
     }
 ]
 
@@ -50,11 +54,11 @@ const Category = () => {
                         {/* category  */}
                         {category.map((item, index) => {
                             return (
-                                <div key={index} className="px-3 lg:px-10">
+                                <div key={index} className="px-3 lg:px-4">
                                     {/* Image  */}
                                     <div 
                                     onClick={()=>navigate(`/category/${item.name}`)}
-                                    className=" w-16 h-16 lg:w-24 lg:h-24 max-w-xs rounded-full  bg-pink-500 transition-all hover:bg-pink-400 cursor-pointer mb-1 " >
+                                    className=" w-16 h-16 lg:w-24 lg:h-20  max-w-80 rounded-full  bg-pink-500 transition-all hover:bg-pink-400 cursor-pointer mb-1 " >
                                         <div className="flex justify-center mb-12">
                                             {/* Image tag  */}
                                             <img src={item.image} alt="img" />
