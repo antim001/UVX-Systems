@@ -30,7 +30,7 @@ const Navbar = () => {
 
     // navList Data
     const navList = (
-        <ul className="flex flex-col lg:flex-row lg:space-x-3 text-black font-medium text-md px-5">
+        <ul className="flex flex-col lg:flex-row lg:space-x-3 text-light-blue-800 font-medium text-md px-5">
             {/* Home */}
             <li className="py-2 lg:py-0">
                 <Link to={'/'}>Home</Link>
@@ -79,7 +79,7 @@ const Navbar = () => {
             <li className="py-2 lg:py-0 relative">
                 <Link to={'/cart'} className="relative inline-block">
                     <AiOutlineShoppingCart className="text-2xl" />
-                    <div className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-red-500 text-white rounded-full px-1.5 py-0.5 text-xs font-bold lg:text-sm">
+                    <div className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-blue-300 text-white rounded-full px-1.5 py-0.5 text-xs font-bold lg:text-sm">
                         {cartItems.length}
                     </div>
                 </Link>

@@ -3,6 +3,7 @@ import {BrowserRouter as Router,Route,
 } from 'react-router-dom';
 import { Toaster } from "react-hot-toast";
 import Home from './pages/Home/Home';
+import OrderProceed from './pages/OrderProceed'
 import NoPage from './pages/NoPage/NoPage';
 import ProductInfo from './pages/ProductInfo/ProductInfo';
 import ScrollTop from './components/scrolltop/ScrollTop';
@@ -26,6 +27,7 @@ const App = () => {
       <Routes>
        <Route path='/' element={<Home></Home>}/>
        <Route path='/*' element={<NoPage></NoPage>}/>
+       <Route path='/orderproceed' element={<OrderProceed></OrderProceed>}/>
        <Route path='/productinfo/:id' element={<ProductInfo></ProductInfo>}/>
        <Route path='/cart' element={<CartPage></CartPage>}/>
        <Route path='/allproduct' element={<AllProduct></AllProduct>}/>

@@ -185,7 +185,7 @@ const CartPage = () => {
                                 <div className="px-2 pb-4 font-medium text-green-700">
                                     <div className="flex gap-4 mb-6">
                                         {user ? (
-                                            <Link to="/orderprocedpage" className="bg-green-500 px-4 py-2 rounded-md text-white font-semibold hover:bg-green-600">
+                                            <Link to="/orderproceed" className="bg-blue-500 px-4 py-2 rounded-md text-white font-semibold hover:bg-green-600">
                                                 Proceed to Order
                                             </Link>
                                         ) : (
