@@ -1,74 +1,68 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import SearchBar from './../SearchBar/SearchBar';
-import hero from '../../assets/hero.png'
+import hero from '../../assets/hero.png';
 import { useSelector } from 'react-redux';
 import CategoriesDropdown from './../Categories/Categories';
 
 const Navbar = () => {
-    const user =JSON.parse(localStorage.getItem('users'))
-    const navigate=useNavigate();
-    const logout =()=>{
-       localStorage.clear('users')
-       navigate('/login')
+    const user = JSON.parse(localStorage.getItem('users'));
+    const navigate = useNavigate();
+    
+    const logout = () => {
+        localStorage.clear('users');
+        navigate('/login');
     }
-    //cart items
-    const cartItems=useSelector((state)=>state.cart)
+
+    const cartItems = useSelector((state) => state.cart);
     const [isOpen, setIsOpen] = useState(false);
 
-    // Toggle the dropdown menu
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
     }
 
-    // navList Data
     const navList = (
         <ul className="flex flex-col lg:flex-row lg:space-x-3 text-black font-medium text-md px-5">
-            {/* Home */}
             <li className="py-2 lg:py-0">
                 <Link to={'/'}>Home</Link>
             </li>
-
-            {/* All Product */}
             <li className="py-2 lg:py-0 ">
                 <Link to={'/allproduct'}>All Product</Link>
             </li>
-             {/* categories */}
-             <li className="py-2 lg:py-0">
-                <Link to={'/'}><CategoriesDropdown></CategoriesDropdown></Link>
+            <li className="py-2 lg:py-0">
+                <Link to={'/'}><CategoriesDropdown /></Link>
             </li>
-
-            {/* Signup */}
             {
-                !user ?<li className="py-2 lg:py-0">
-                <Link to={'/signup'}>Signup</Link>
-            </li>:""
+                !user ? (
+                    <>
+                        <li className="py-2 lg:py-0">
+                            <Link to={'/signup'}>Signup</Link>
+                        </li>
+                        <li className="py-2 lg:py-0">
+                            <Link to={'/login'}>Login</Link>
+                        </li>
+                    </>
+                ) : null
             }
-            {/* //login */}
             {
-                !user ?<li className="py-2 lg:py-0">
-                <Link to={'/login'}>Login</Link>
-            </li>:""
+                user?.role === "user" && (
+                    <li className="py-2 lg:py-0">
+                        <Link to={'/user-dashboard'}>{user?.name}</Link>
+                    </li>
+                )
             }
-            {/* User */}
-           {
-            user?.role==="user" && <li className="py-2 lg:py-0">
-            <Link to={'/user-dashboard'}>{user?.name}</Link>
-        </li>
-           }
-             {/* admin */}
-             {
-                user?.role==='admin' && <li className="py-2 lg:py-0">
-                <Link className=' font-bold rounded-r-xl' to={'/admin-dashboard'}>{user?.name}</Link>
-            </li>
-             }
- {/* /logout */}
- {
-    user && <li className='cursor-pointer' onClick={logout}>Logout
-    
-    </li>
- }
-            {/* Cart */}
+            {
+                user?.role === 'admin' && (
+                    <li className="py-2 lg:py-0">
+                        <Link className=' font-bold rounded-r-xl' to={'/admin-dashboard'}>{user?.name}</Link>
+                    </li>
+                )
+            }
+            {
+                user && (
+                    <li className='cursor-pointer' onClick={logout}>Logout</li>
+                )
+            }
             <li className="py-2 lg:py-0">
                 <Link to={'/cart'}>
                     Cart({cartItems.length})
@@ -79,16 +73,21 @@ const Navbar = () => {
 
     return (
         <nav className="bg-gray-300 sticky top-0 z-10 mb-4">
-            {/* main */}
             <div className="flex justify-between items-center py-3 px-5 lg:px-3">
-                {/* left */}
-                <div className="left">
+                <div className="left flex items-center">
                     <Link to={'/'}>
                         <img className='w-40' src={hero} alt="" />
                     </Link>
                 </div>
+                
+                <div className="hidden lg:block lg:flex-grow lg:flex lg:justify-center">
+                    <SearchBar />
+                </div>
+                
+                <div className="hidden lg:flex lg:items-center lg:ml-auto">
+                    {navList}
+                </div>
 
-                {/* Hamburger menu */}
                 <div className="lg:hidden">
                     <button onClick={toggleDropdown} className="text-black focus:outline-none">
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -96,19 +95,8 @@ const Navbar = () => {
                         </svg>
                     </button>
                 </div>
-
-                {/* right - hidden on small screens */}
-                <div className="hidden lg:flex lg:items-center">
-                    {navList}
-                </div>
-
-                {/* Search Bar - hidden on small screens */}
-                <div className="hidden lg:block">
-                    <SearchBar />
-                </div>
             </div>
 
-            {/* Dropdown menu */}
             {isOpen && (
                 <div className="lg:hidden bg-gray-300">
                     {navList}
