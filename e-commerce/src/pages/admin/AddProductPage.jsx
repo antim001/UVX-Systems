@@ -8,28 +8,28 @@ import Loader from "../../components/loader/Loader";
 
 const categoryList = [
     {
-        name: 'Safety equipment'
+        name: 'Safety equipments'
     },
     {
         name: 'Educational models'
     },
     {
-        name: 'water purification systems'
+        name: 'Water purification system'
     },
     {
-        name: 'Laboratory Equipments'
+        name: 'Laboratory equipments'
     },
     {
-        name: 'Laboratory  glassware'
+        name: 'Meter and timers'
     },
     {
-        name: 'Laboratory  consumble'
+        name: 'Laboratory glassware'
     },
     {
-        name: 'Laboratory  chemicals and reagent'
+        name: 'Laboratory consumable'
     },
     {
-        name: 'Meter & Timers'
+        name: 'Laboratory chemicals & reagent'
     },
     {
         name: 'Office equipments'

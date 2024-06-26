@@ -5,6 +5,7 @@ import hero from '../../assets/hero.png';
 import { useSelector } from 'react-redux';
 import CategoriesDropdown from './../Categories/Categories';
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { FaUser } from "react-icons/fa";
 
 const Navbar = () => {
     const user = JSON.parse(localStorage.getItem('users'));
@@ -61,16 +62,22 @@ const Navbar = () => {
             {user && (
                 <li className="py-2 lg:py-0 relative">
                     <button onClick={toggleUserDropdown} className="focus:outline-none">
-                        {user.name}
+                      
+                      <  FaUser></FaUser>
+                      
                     </button>
                     {userDropdownOpen && (
-                        <ul className="absolute right-0 lg:right-auto lg:left-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 z-10">
+                        <ul className="absolute right-0  lg:right-16 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 z-10">
+                           <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer" onClick={() => { setUserDropdownOpen(false); logout(); }}>
+                               Name: {user.name}
+                            </li>
                             <li className="px-4 py-2 hover:bg-gray-200">
                                 <Link to={'/user-dashboard'} onClick={() => setUserDropdownOpen(false)}>Dashboard</Link>
                             </li>
                             <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer" onClick={() => { setUserDropdownOpen(false); logout(); }}>
                                 Logout
                             </li>
+                            
                         </ul>
                     )}
                 </li>

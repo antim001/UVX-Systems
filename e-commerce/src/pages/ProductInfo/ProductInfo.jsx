@@ -8,6 +8,7 @@ import Loader from "../../components/loader/Loader";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, deleteFromCart } from "../../redux/cartSlice";
 import toast from "react-hot-toast";
+import { Link } from 'react-router-dom';
 
 const ProductInfo = () => {
     const context = useContext(myContext);
@@ -182,10 +183,10 @@ const ProductInfo = () => {
                                             }
                                         </div>
                                         <div className="flex gap-4 mb-6">
-                                            <button
+                                            <button 
                                                 className="w-full px-4 py-3 text-center text-gray-100 bg-pink-600 border border-transparent dark:border-gray-700 hover:border-pink-500 hover:text-pink-700 hover:bg-pink-100 rounded-xl"
                                             >
-                                                Buy now
+                                                <Link to='/orderproceed'>Buy now</Link>
                                             </button>
                                         </div>
                                     </div>

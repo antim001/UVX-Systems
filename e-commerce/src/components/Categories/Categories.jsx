@@ -3,14 +3,14 @@ import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import {Link  } from "react-router-dom";
 const category = [
-  { name: 'Safety-equipments' },
+  { name: 'Safety equipments' },
   { name: 'Educational models' },
   { name: 'Water purification system' },
-  { name: 'Laboratory-equipments' },
+  { name: 'Laboratory equipments' },
   { name: 'Meter and timers' },
   { name: 'Laboratory glassware' },
   { name: 'Laboratory consumable' },
-  { name: 'Laboratory chemicals and reagent' },
+  { name: 'Laboratory chemicals & reagent' },
   { name: 'Office equipments' },
 ];
 

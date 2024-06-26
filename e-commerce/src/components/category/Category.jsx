@@ -6,19 +6,19 @@ import { useNavigate } from 'react-router';
 const category = [
     {
         image: 'https://cdn-icons-png.flaticon.com/256/4359/4359963.png',
-        name: 'Safety-equipments'
+        name: 'Safety equipments'
     },
     {
         image: 'https://cdn-icons-png.flaticon.com/256/11833/11833323.png',
-        name: 'Educational-models'
+        name: 'Educational models'
     },
     {
         image: 'https://cdn-icons-png.flaticon.com/256/8174/8174424.png',
-        name: 'water-purification-system'
+        name: 'Water purification system'
     },
     {
         image: 'https://cdn-icons-png.flaticon.com/256/7648/7648246.png',
-        name: 'Laboratory-equipments'
+        name: 'Laboratory equipments'
     },
     {
         image: 'https://cdn-icons-png.flaticon.com/256/12142/12142416.png',
@@ -30,11 +30,11 @@ const category = [
     },
     {
         image: 'https://cdn-icons-png.flaticon.com/256/12114/12114279.png',
-        name: 'Laboratory  consumble'
+        name: 'Laboratory consumble'
     },
     {
         image: 'https://cdn-icons-png.flaticon.com/256/11946/11946316.png',
-        name: 'Laboratory  chemicals & reagent'
+        name: 'Laboratory chemicals & reagent'
     },
     {
         image: 'https://cdn-icons-png.flaticon.com/256/11946/11946316.png',
