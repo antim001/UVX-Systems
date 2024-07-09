@@ -1,11 +1,11 @@
-import hero from '../../assets/hero.png';
+import logo from '../../assets/logo.png'
 
 const Footer = () => {
     return (
         <footer className="footer p-10 bg-base-200 text-base-content">
         <aside>
-        <img className='w-40' src={hero} alt="" />
-          <p>UVX systems.<br/>Providing reliable tech since 2018</p>
+        <img className='w-40' src={logo} alt="" />
+          <p>Aioalliance.<br/>Providing reliable tech since 2018</p>
         </aside> 
         <nav>
           <h6 className="footer-title">Services</h6> 

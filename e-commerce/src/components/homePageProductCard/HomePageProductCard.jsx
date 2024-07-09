@@ -45,13 +45,16 @@ const HomePageProductCard = () => {
                                         />
                                         <div className="p-4 ">
                                             <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                                                UVX
+                                                Aioalliance
                                             </h2>
                                             <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
                                                 {title.substring(0, 25)}
                                             </h1>
-                                            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+                                            {/* <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
                                                 ₹{price}
+                                            </h1> */}
+                                            <h1 className="title-font text-lg font-medium text-blue-900 mb-3">
+                                                Negotiable
                                             </h1>
 
                                             <div className="flex justify-center">

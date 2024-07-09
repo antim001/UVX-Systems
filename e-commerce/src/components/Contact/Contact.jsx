@@ -17,6 +17,7 @@ const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (e) => {
+    e.preventDefault();
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -107,13 +108,13 @@ const Contact = () => {
         {isSubmitted && <p className="text-green-500 text-center mt-5">Your message has been sent successfully!</p>}
       </form>
       <div className="flex flex-col mt-10 space-y-4 text-center">
-        <div className="flex items-center justify-center space-x-2">
+        {/* <div className="flex items-center justify-center space-x-2">
           <FaPhone className="text-blue-600" />
           <span className="text-gray-600">(123) 456-7890</span>
-        </div>
+        </div> */}
         <div className="flex items-center justify-center space-x-2">
           <FaEnvelope className="text-blue-600" />
-          <span className="text-gray-600">info@example.com</span>
+          <span className="text-gray-600">info@aioalliance.com</span>
         </div>
         <div className="flex items-center justify-center space-x-2">
           <FaMapMarkerAlt className="text-blue-600" />

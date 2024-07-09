@@ -40,7 +40,7 @@ const Mission = () => {
               </div>
               <h3 className="text-xl font-semibold text-gray-800 mb-2">Innovation</h3>
               <p className="text-gray-600">
-              UVX goal is to contribute in improving high quality lab consumables and chemical products (analytical and reagent grade) in the whole world with affordable prices to create 
+              Aioalliance goal is to contribute in improving high quality lab consumables and chemical products (analytical and reagent grade) in the whole world with affordable prices to create 
               ultra-value to pharma industry through innovation & diversification.
               </p>
             </div>
@@ -56,7 +56,7 @@ const Mission = () => {
               </div>
               <h3 className="text-xl font-semibold text-gray-800 mb-2">Mission and Goal</h3>
               <p className="text-gray-600">
-              UVX goal is to contribute in improving high quality lab
+             Aioalliance goal is to contribute in improving high quality lab
                consumables and chemical products (analytical and reagent grade) in the whole world with affordable prices to create ultra-value to pharma industry through innovation & diversification.
               </p>
             </div>

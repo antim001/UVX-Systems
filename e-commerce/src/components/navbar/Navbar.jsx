@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import SearchBar from './../SearchBar/SearchBar';
-import hero from '../../assets/hero.png';
+import logo from '../../assets/logo.png';
 import { useSelector } from 'react-redux';
 import CategoriesDropdown from './../Categories/Categories';
 import { AiOutlineShoppingCart } from "react-icons/ai";
@@ -101,7 +101,7 @@ const Navbar = () => {
                 {/* left */}
                 <div className="left">
                     <Link to={'/'}>
-                        <img className='w-40' src={hero} alt="" />
+                        <img className='w-28 max-h-28' src={logo} alt="" />
                     </Link>
                 </div>
 
