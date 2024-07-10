@@ -152,9 +152,9 @@ const ProductInfo = () => {
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <p className="inline-block text-2xl font-semibold text-gray-700 dark:text-gray-400 ">
+                                            {/* <p className="inline-block text-2xl font-semibold text-gray-700 dark:text-gray-400 ">
                                                 <span>₹ {product?.price}</span>
-                                            </p>
+                                            </p> */}
                                         </div>
                                         <div className="mb-6">
                                             <h2 className="mb-2 text-lg font-bold text-gray-700 dark:text-gray-400">

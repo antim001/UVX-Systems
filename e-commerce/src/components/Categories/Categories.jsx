@@ -23,7 +23,7 @@ const CategoriesDropdown = () => {
   };
 
   return (
-    <li className="relative py-2 lg:py-0">
+    <li className="relative py-2 lg:py-0 ">
       <button
         className="flex items-center focus:outline-none"
         onClick={toggleDropdown}

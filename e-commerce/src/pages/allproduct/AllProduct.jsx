@@ -53,16 +53,16 @@ const AllProduct = () => {
                                                 {/* <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
                                                     ₹{price}
                                                 </h1> */}
-                                                <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                                                    Negotiable
+                                                <h1 className="title-font text-lg font-medium text-green-900 mb-3">
+                                                    TBA
                                                 </h1>
 
                                                 <div className="flex justify-center">
                                                     <button
-                                                        onClick={() => addCart(item)}
+                                                        // onClick={() => addCart(item)}
                                                         className="bg-blue-500 hover:bg-blue-600 w-full text-white py-[4px] rounded-lg font-bold"
                                                     >
-                                                        Add To Cart
+                                                        Details
                                                     </button>
                                                 </div>
                                             </div>

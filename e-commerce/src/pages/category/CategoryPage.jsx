@@ -59,30 +59,31 @@ const CategoryPage = () => {
                                     filterProduct.map((item) => {
                                         const { id, title, price, productImageUrl } = item;
                                         return (
-                                            <div key={id} className="p-4 w-full md:w-1/4">
-                                                <div className="h-full border border-gray-300 rounded-xl overflow-hidden shadow-md cursor-pointer">
+                                            <div key={id} className="p-4 w-full md:w-1/4 ">
+                                                <div  onClick={() => navigate(`/productinfo/${id}`)}
+                                                className="h-full border border-gray-300 rounded-xl overflow-hidden shadow-md cursor-pointer">
                                                     <img
-                                                        onClick={() => navigate(`/productinfo/${id}`)}
+                                                       
                                                         className="lg:h-80 h-96 w-full"
                                                         src={productImageUrl}
                                                         alt={title}
                                                     />
                                                     <div className="p-6">
                                                         <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                                                            UVX
+                                                            Aioalliance
                                                         </h2>
                                                         <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
                                                             {title.substring(0, 25)}
                                                         </h1>
-                                                        <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                                                            ₹{price}
+                                                        <h1 className="title-font text-lg font-medium text-green-900 mb-3">
+                                                            TBA
                                                         </h1>
                                                         <div className="flex justify-center">
                                                             <button
-                                                                onClick={() => addCart(item)}
+                                                                // onClick={() => addCart(item)}
                                                                 className="bg-blue-500 hover:bg-blue-600 w-full text-white py-[4px] rounded-lg font-bold"
                                                             >
-                                                                Add To Cart
+                                                                Details
                                                             </button>
                                                         </div>
                                                     </div>

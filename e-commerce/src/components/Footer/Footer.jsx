@@ -5,7 +5,7 @@ const Footer = () => {
         <footer className="footer p-10 bg-base-200 text-base-content">
         <aside>
         <img className='w-40' src={logo} alt="" />
-          <p>Aioalliance.<br/>Providing reliable tech since 2018</p>
+          <p>Aioalliance.<br/>Providing reliable service since 1988</p>
         </aside> 
         <nav>
           <h6 className="footer-title">Services</h6> 
