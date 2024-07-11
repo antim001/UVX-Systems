@@ -118,7 +118,7 @@ const Contact = () => {
         </div>
         <div className="flex items-center justify-center space-x-2">
           <FaMapMarkerAlt className="text-blue-600" />
-          <span className="text-gray-600">Road 4 House 30, Uttara 10,Uttara,Bangladesh</span>
+          <span className="text-gray-600">1234 Elm Street ,Suite 567 Springfield, IL 62701, USA</span>
         </div>
       </div>
     </div>
